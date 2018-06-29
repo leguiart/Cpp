@@ -1,7 +1,6 @@
 *.exe
 *.o
-
-*
+.vscode/
 
 !README
 !README.md
