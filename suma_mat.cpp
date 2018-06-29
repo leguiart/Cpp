@@ -19,7 +19,7 @@ int main()
     cout<<"Ingrese los elementos de la matriz1: "<<endl;
     for(int i = 0; i < n; i++)
     {
-        for(int j = 0; j < m j++)
+        for(int j = 0; j < m ;j++)
         {
             cout<<"mat1["<<i<<"]["<<j<<"]: ";
             cin>>mat1[i][j];
@@ -27,7 +27,7 @@ int main()
     }
 
     cout<<"Ingrese los elementos de la matriz2: "<<endl;
-    for(int i = 0; i < n i++)
+    for(int i = 0; i < n ;i++)
     {
         for(int j = 0; j < m; j++)
         {
