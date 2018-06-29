@@ -20,3 +20,5 @@ int main(){
     cout<<"Direccion del puntero "<<&puntero<<endl;
     return 0;
 }
+
+
