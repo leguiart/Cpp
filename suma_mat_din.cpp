@@ -1,5 +1,4 @@
 #include <iostream>
-#define MAX 100
 
 using namespace std;
 
@@ -21,7 +20,7 @@ int main()
 
         cout<<"Ingrese el numero de renglones: ";
         cin>>n;
-    }while((n>MAX || n<0)&&(m>MAX || m<0));
+    }while(n<0 && m<0);
     mat1 = reservaMem(m, n);
     mat2 = reservaMem(m, n);
     cout<<"Ingrese los elementos de la matriz1: "<<endl;
