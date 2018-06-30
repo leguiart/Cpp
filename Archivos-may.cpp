@@ -26,7 +26,8 @@ void get_stream(char archivo1[], char archivo2[]){
         if(s[s.size()-1] == '0')
             break;
     }
-    
+    of1.close();
+    of2.close();
 }
 
 void toUpper(string& s){
