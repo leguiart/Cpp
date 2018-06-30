@@ -24,5 +24,6 @@ int main(){
     else{
         cout<<"Archivo en mal estado"<<endl;
     }
+    entrada.close();
     return 0;
 }
