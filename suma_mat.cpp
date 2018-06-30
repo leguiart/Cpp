@@ -3,6 +3,10 @@
 
 using namespace std;
 
+void llenaMatriz(int [][MAX], int, int);
+void muestraMatriz(int [][MAX], int, int);
+void sumaMatrices(int [][MAX], int [][MAX], int , int);
+
 int main()
 {
     /* Suma de matrices */
@@ -17,65 +21,48 @@ int main()
     }while((n>MAX || n<0)&&(m>MAX || m<0));
 
     cout<<"Ingrese los elementos de la matriz1: "<<endl;
-    for(int i = 0; i < n; i++)
-    {
-        for(int j = 0; j < m; j++)
-        {
-            cout<<"mat1["<<i<<"]["<<j<<"]: ";
-            cin>>mat1[i][j];
-        }
-    }
-
+    llenaMatriz(mat1, m, n);
     cout<<"Ingrese los elementos de la matriz2: "<<endl;
-    for(int i = 0; i < n; i++)
-    {
-        for(int j = 0; j < m; j++)
-        {
-            cout<<"mat2["<<i<<"]["<<j<<"]: ";
-            cin>>mat2[i][j];
-        }
-    }
-
+    llenaMatriz(mat2, m, n);
     cout<<endl;
-
-    for(int i = 0; i < n; i++)
-    {
-        for(int j = 0; j < m; j++)
-        {
-            cout<<mat1[i][j]<<" ";
-        }
-        cout<<"\n";
-    }
-
+    muestraMatriz(mat1, m, n);
     cout<<" + "<<endl;
-
-    for(int i = 0; i < n; i++)
-    {
-        for(int j = 0; j < m; j++)
-        {
-            cout<<mat2[i][j]<<" ";
-        }
-        cout<<"\n";
-    }
-
-    for(int i = 0; i < n; i++)
-    {
-        for(int j = 0; j < m; j++)
-        {
-            mat2[i][j]+=mat1[i][j];
-        }
-    }
-
+    muestraMatriz(mat2, m, n);
+    sumaMatrices(mat1, mat2, m, n);
     cout<<" = "<<endl;
-
-    for(int i = 0; i < n; i++)
-    {
-        for(int j = 0; j < m; j++)
-        {
-            cout<<mat2[i][j]<<" ";
-        }
-        cout<<"\n";
-    }
-
+    muestraMatriz(mat2, m, n);
     return 0;
 }
+
+void llenaMatriz(int M[][MAX], int m, int n){
+    for(int i = 0; i < m; i++)
+    {
+        for(int j = 0; j < n; j++)
+        {
+            cout<<"mat["<<i<<"]["<<j<<"]: ";
+            cin>>M[i][j];
+        }
+    }
+}
+
+void muestraMatriz(int M[][MAX], int m, int n){
+    for(int i = 0; i < m; i++)
+    {
+        for(int j = 0; j < n; j++)
+        {
+            cout<<M[i][j]<<" ";
+        }
+        cout<<"\n";
+    }
+}
+
+void sumaMatrices(int M1[][MAX], int M2[][MAX], int m, int n){
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = 0; j < m; j++)
+        {
+            M2[i][j]+=M1[i][j];
+        }
+    }
+}
+
