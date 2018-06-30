@@ -57,9 +57,9 @@ void muestraMatriz(int M[][MAX], int m, int n){
 }
 
 void sumaMatrices(int M1[][MAX], int M2[][MAX], int m, int n){
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < m; i++)
     {
-        for(int j = 0; j < m; j++)
+        for(int j = 0; j < n; j++)
         {
             M2[i][j]+=M1[i][j];
         }
